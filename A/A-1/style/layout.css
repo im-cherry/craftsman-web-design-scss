@@ -1,0 +1,62 @@
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#header {
+  width: 100%;
+  display: flex;
+}
+#header .logo {
+  width: 20%;
+  height: 100px;
+  background-color: #fafafa;
+}
+#header .nav {
+  width: 80%;
+  height: 100px;
+  background-color: #fafafa;
+}
+
+#slider {
+  width: 100%;
+  height: 300px;
+}
+
+#contents {
+  width: 100%;
+  display: flex;
+}
+#contents .tap {
+  width: 33.3333333333%;
+  height: 200px;
+  background-color: #ffe100;
+}
+#contents .banner {
+  width: 33.3333333333%;
+  height: 200px;
+}
+#contents .link {
+  width: 33.3333333333%;
+  height: 200px;
+}
+
+#footer {
+  width: 100%;
+  display: flex;
+}
+#footer .logo {
+  width: 20%;
+  height: 100px;
+  background-color: #fafafa;
+}
+#footer .copyright {
+  width: 80%;
+  height: 100px;
+  background-color: #ffae00;
+}
+#footer .sns {
+  width: 20%;
+  height: 100px;
+  background-color: #ffe100;
+}

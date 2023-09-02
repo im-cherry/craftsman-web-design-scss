@@ -1,0 +1,48 @@
+#wrap {
+  position: relative;
+}
+
+#popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 500px;
+  height: 300px;
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 2px #757575;
+  z-index: 1000;
+}
+#popup.active {
+  display: flex;
+}
+#popup .title {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #bdbdbd;
+}
+#popup .title p {
+  font-size: 20px;
+  font-weight: 700;
+  word-break: break-all;
+}
+#popup .content {
+  height: 100%;
+  padding: 10px 0;
+}
+#popup .content p {
+  word-break: break-all;
+}
+#popup .close {
+  align-self: flex-end;
+}
+#popup .close button {
+  padding: 5px 10px;
+  background-color: #ffae00;
+  color: #fff;
+}
+#popup .close button:hover {
+  background-color: #ff7d00;
+}

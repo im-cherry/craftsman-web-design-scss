@@ -1,0 +1,88 @@
+@import "./_color";
+
+#header {
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      width: 200px;
+      height: 40px;
+    }
+  }
+
+  .nav {
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &.active {
+      > ul > li > ul {
+        height: calc(40px * 4);
+      }
+
+      > ul > li.active > a {
+        background-color: $sub1;
+        color: #333;
+      }
+
+      > ul > li.active > ul > li > a {
+        color: #333;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    > ul {
+      position: relative;
+      display: flex;
+      z-index: 999;
+
+      > li {
+        position: relative;
+
+        > a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          height: 40px;
+          background-color: $main;
+          color: #fff;
+
+          &:hover {
+            background-color: $sub1;
+            color: #333;
+          }
+        }
+
+        > ul {
+          position: absolute;
+          height: 0;
+          overflow: hidden;
+          transition: 0.6s;
+
+          > li {
+            > a {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 150px;
+              height: 40px;
+              background-color: $sub1;
+              color: #fff;
+
+              &:hover {
+                background-color: $sub2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

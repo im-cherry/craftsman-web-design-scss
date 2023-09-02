@@ -1,0 +1,160 @@
+@import "./_color";
+
+#contents {
+  // tap
+  .tap {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+    // tapMenu
+    .menu {
+      align-self: flex-start;
+      height: 20%;
+
+      ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        li {
+          background-color: $bg3;
+
+          button {
+            width: 100%;
+            height: 100%;
+            padding: 0 15px;
+            font-size: 18px;
+          }
+
+          &.active,
+          &:hover {
+            background-color: #fff;
+
+            button {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+
+    // tapContent
+    .content {
+      height: 80%;
+      position: relative;
+      background-color: #fff;
+
+      div {
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 10px 15px;
+
+        &.active {
+          display: flex;
+        }
+      }
+
+      // notice
+      .notice {
+        ul {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          li a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            gap: 15px;
+
+            &:hover {
+              text-decoration: underline;
+            }
+
+            span:first-child {
+              width: 100%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+
+      // gallery
+      .gallery {
+        ul {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          li {
+            width: calc((100% - 15px * 2) / 3);
+
+            a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+
+              img {
+                object-fit: cover;
+                filter: brightness(0.9);
+                transition: 0.6s;
+              }
+
+              &:hover img {
+                filter: brightness(1);
+                transform: scale(1.05);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // banner
+  .banner {
+    a {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        object-position: top;
+        object-fit: cover;
+        filter: brightness(0.8);
+        transition: 0.6s;
+
+        &:hover {
+          filter: brightness(1);
+          transform: scale(1.05);
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: #fff;
+      }
+    }
+  }
+
+  // link
+  .link {
+    @extend .banner;
+  }
+}
